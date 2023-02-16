@@ -1,0 +1,250 @@
+/* Basic */
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;}
+body {
+    background-color: #181818;}
+html {
+    scroll-behavior: smooth;}
+a {
+    text-decoration: none;}
+a:hover:not(.dropdown-link) {
+    transition: all 0.3s ease-in-out;}
+ul {
+    list-style: none;}
+
+.Title-line {
+    width:24%;
+    margin:10px auto;
+    height: 0px;
+    border: none;
+    border-top: 3px solid #0072b1;
+    border-radius: 7px 7px 7px 7px;
+}
+/* Basic */
+
+/*Logo*/
+.logo-link {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 2em;
+    font-weight: 800;
+}
+/*Logo*/
+
+/* Navbar + Header */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+}
+.navbar-container li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.nav a {
+    float: left;
+    text-align: right;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.nav {
+    display: inline;
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+    overflow: hidden;
+    background: transparent;
+}
+#project-dropdown .project-link {
+    text-align: center;
+}
+  
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
+}
+
+#header .project-drop .fa-caret-down, #header .navbar-container li a, #header .nav-link#project-drop span{
+    color: black;
+    transition: color 0.5s ease;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+  
+/* Navbar + Header*/
+  
+/* Navbar Project Dropdown */
+.project-dropdown-container {
+    position: absolute;
+    background-color: rgba(126, 124, 124, 0.5);
+    padding: 1px;
+    height: auto;
+    width: fit-content;
+    border: 1px solid #ccc;
+    z-index: 1;
+    right:350px;
+    top: 60px;
+    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+}
+
+#project-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a:hover + .project-dropdown-container, .project-dropdown-container:hover {
+    display: block;
+    transform: scaleY(1);
+}
+
+#header #project-dropdown .dropdown-link:hover {
+    background-color: #333;
+}
+
+a.nav-link.project-drop {
+    color: black;
+}
+
+
+/* Navbar Project Dropdown */
+
+/* Link Stroke */
+nav#stroke ul li a {
+  position: relative;
+}
+nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: rgb(189, 189, 189);
+  border-radius: 7px 7px 7px 7px;
+  height: 3px;
+}
+  nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):hover:after {
+  width: 70%;
+  transition: all 0.4s;
+}
+
+/* Link Stroke */
+
+
+/* Footer */
+footer {
+    text-align: right;}
+/* Footer */
+
+
+
+/* Sub Pages */
+
+.project-title {
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.slideshow-container {
+    width: 700px;
+    height: 400px;
+    position: relative;
+    margin-left: 3%;
+}
+
+.slideshow-nav .fa-arrow-left {
+    position: absolute;
+    z-index: 10;
+    font-size: 3em;
+    top: 50%;
+    left: 20px;
+    font-weight: 700;
+}
+
+.slideshow-nav .fa-arrow-right {
+    right: 20px;
+    position: absolute;
+    font-size: 3em;
+    z-index: 10;
+    top: 50%;
+    font-weight: 700;
+}
+
+.slideshow-nav .fas {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  .slideshow-nav .fas:hover {
+    color: rgb(153, 151, 155);
+  }
+
+  .carousel {
+    transition: all 0.3s ease;
+  }
+  .carousel img {
+    width: 100%;
+    transition: all 0.3s ease;
+    border: 6px solid white;
+  }
+  
+  .item {
+    position: absolute;
+    display: none;
+  }
+  
+  .main {
+    display: block;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.3);
+    height: 35px;
+  }
+
+  .spec-title {
+    text-align: center;
+    line-height: 150%;
+    font-size: 45px;
+}
+
+.specs {
+    margin-top: 100px;
+    text-align: center;
+}
