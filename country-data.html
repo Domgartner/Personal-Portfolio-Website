@@ -19,7 +19,7 @@
         <nav id = "stroke" class = "nav">
             <ul class="navbar-container">
               <li><a href ="index.html#" class = "logo-link">Dominic's Portfolio</a></li>
-              <li><a href = "index.html#" class = "nav-link active">Home</a></li>
+              <li><a href = "index.html#" class = "nav-link">Home</a></li>
               <li><a href = "index.html#about-scroll" class = "nav-link">About</a></li>
               <li><a href = "index.html#skills-scroll" class = "nav-link">Skills</a></li>
               <li><a href = "index.html#projects-scroll" class = "nav-link project-drop" id="project-drop"><span>Projects </span>&nbsp;<i class="fas fa-caret-down"></i></a>
@@ -29,21 +29,156 @@
                     <li><a href="country-data.html" class="dropdown-link">Country Data</a></li>
                     <li><a href="#" class="dropdown-link">Java Class Project</a></li>
                     <li><a href="#" class="dropdown-link">DS and Alg Project</a></li>
+                    <li><a href="#" class="dropdown-link">Wordle Clone</a></li>
                   </ul>
                 </div>
               </li>
               <li><a href = "index.html#blog-scroll" class = "nav-link" data-text = "Blog">Blog</a></li>
-              <li><a href = "index.html#contact-scroll" class = "nav-link" data-text = "Contact">Contact</a></li>
+              <li><a href = "#contact-scroll" class = "nav-link" data-text = "Contact">Contact</a></li>
             </ul>
         </nav>
       </header>
     <!-- =========== END HEADER ============ -->
-    <h1 class="project-title">Country Data Application</h1>
-    <hr class="Title-line">
+        <h1 class="project-title">Country Data Application</h1>
+        <hr class="Title-line">
+        <br><br>
+        <section class="project-body">
+            <div class="row">
+                <div class="col-lg-6">
+                  <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 1</div>
+                      <a href="Images/233-final-proj.png" target="_blank"><img src="Images/233-final-proj.png" style="width:100%"></a>
+                      <div class="text">Python Code</div>
+                    </div>
+                  </div>
+                    <br>
+                    <div style="text-align:center">
+                      <span role="button" class="dot"></span> 
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <div class="project-desc">
+                  <br>
+                  <p>
+                    This project was completed in 2020, during my first year of engineering. Creating this program taught me a lot about data visualization 
+                    and data iteration in Python. This program allows users to access specific data about a country of their choice and graphs the data neatly for visual analysis. 
+                    The program imports three .csv files, which contain data about geographical, population, and species data.
+                  </p>
+                  <br>
+                  <div class="specs">
+                    <h4 class="minor-title">Specs </h4>
+                    <hr class="minor-title-line">
+                    <div class="spec-container">
+                      <ul>
+                        <li class="spec-list"><strong>Software: </strong> Python</li>
+                        <li class="spec-list"><strong>Dependencies: </strong> numpy, matplotlib.pyplot, pandas</li>
+                        <li class="spec-list"><strong>Code Repository: &nbsp; </strong><span class="git-repo"><a href="https://github.com/Domgartner/Country-Data-ENDG223" target="_blank"><i class="fab fa-github"></i></a></span></li>
+                      </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <div class="proj-detail-cont">
+          <div class="proj-detail">
+            <h1 class="detail-title">Project Details</h1>
+            <hr class="Title-line">
+            <div class="detail-desc">
+              <p>
+                This project was completed as an assignment for ENDG 233, a first year engineering course at the University of Calgary with focus on programming with data. 
+                <br><br>
+                The program reads data from three .csv files. One file contains geographical data from countries around the world, another contains country population data, and 
+                the last file contains threatened species data. Throughout the program, users are prompted to input different statistics they would like to access. These user inputs 
+                are used to itterate through the data in the csv files and return the desired data and statistics. The output statistics of the program are very customizable and unique 
+                for every runthrough. Basic arithmetic is performed on certain statisics, such as calculating mean, average, total, max, min, etc.
+                <br><br>
+                Exception handling is implemented to ensure invalid inputs do not result in a crashed program. Rather, the user is repeatedly prompted to enter valid input. 
+                After the program has recieved all the input required to generate the custom statistics on the country of the users choosing, the data is graphed neatly for visual analysis using matplotlib. 
+                The number if graphs and statistics outputted is a direct result of the users input to the prompt questions asked throughout the program.
 
 
 
+              </p>
+              <br>
+              <h2 class="minor-title">Demonstration</h2>
+              <div class="demo-vid">
+                <video class="demo-video" width="708" height="420" controls>
+                  <source src="files/Country-data-demo.mp4" type="video/mp4">
+                  Video load failed.
+                </video>
+              </div>
+              <br><br>
+            </div>
+          </div>
+        </div>
 
+        <br><br>
+        <div class="scroll-link" id="contact-scroll"></div>
+        <br><br>
+
+        <section id = "Contact" class="contact-section">
+          <br><br><br>
+          <div class="title-desc">
+            <h1 class = "project-title">Contact Me</h1>
+          </div>
+          <hr class="Title-line">
+          <br>
+          <div class="section-start"></div>
+          <div class="contact-box">
+            <div class="input-group">
+              <div class="input-container">
+                <input type="text" name="text" autocomplete="off" class="input" id="name-input" required>
+                <label class="name-label" for="name-input">Name</label>
+              </div>
+              <div class="input-container">
+                <input name="email" type="text" class="input" id="email-input" required />
+                <label class="email-label" for="email-input">Email</label>
+              </div>
+              <div class="input-container">
+                <input name="subject" type="text" class="input" id="subject-input" required />
+                <label class="subject-label" for="subject-input">Subject</label>
+              </div>
+              <textarea name="message" class="input" placeholder="Message" style="width:350px;min-width: 150px; max-width: 550px; max-height: 320px;"></textarea>
+              <button type="submit" value="Submit" class="input send-button">Send</button>
+            </div>
+    
+            <div class="contact-farewell">
+              <h2 class="reach-out">Reach Out</h2>
+              <hr class="Title-line">
+              <br>
+              <p>Feel free to contact me at any time. I welcome all feedback and suggestions for this site or any of the projects here. </p>
+              <br><br>
+              <div class="location">
+                <p><i class="fas fa-map-pin"></i>&ensp; Calgary, Alberta, Canada</p>
+              </div>
+              <br>
+              <div class="phone">
+                <p><i class="fas fa-mobile"></i>&ensp; (403)-472-9927</p>
+              </div>
+              <br>
+              <div class="email">
+                <p><i class="fas fa-envelope"></i>&ensp; <u>dominicgartner1@gmail.com</u></p>
+              </div>
+              <br>
+              <div class="socials-icon">
+                <a href="https://github.com/Domgartner" target="_blank" id="git-logo"><i class="fab fa-github"></i></a>&nbsp;
+                <a href="https://www.linkedin.com/in/dominic-gartner-a34b25230/" target="_blank" id="git-logo"><i class="fab fa-linkedin"></i></a><br>
+              </div>
+            </div>
+          </div>
+          <br><br><br><br><br><br>
+        </section>
+         <!-- ============ BEGIN FOOTER ============ -->
+    <footer>
+      <hr>
+      <br>
+      <p>Copyright ©2023 Dominic Gartner</p>
+      <br>
+  </footer>
     <script src = "main.js"></script>
 </body>
 </html>

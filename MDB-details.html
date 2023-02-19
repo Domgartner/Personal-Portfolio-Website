@@ -19,7 +19,7 @@
         <nav id = "stroke" class = "nav">
             <ul class="navbar-container">
               <li><a href ="index.html#" class = "logo-link">Dominic's Portfolio</a></li>
-              <li><a href = "index.html#" class = "nav-link active">Home</a></li>
+              <li><a href = "index.html#" class = "nav-link">Home</a></li>
               <li><a href = "index.html#about-scroll" class = "nav-link">About</a></li>
               <li><a href = "index.html#skills-scroll" class = "nav-link">Skills</a></li>
               <li><a href = "index.html#projects-scroll" class = "nav-link project-drop" id="project-drop"><span>Projects </span>&nbsp;<i class="fas fa-caret-down"></i></a>
@@ -29,11 +29,12 @@
                     <li><a href="country-data.html" class="dropdown-link">Country Data</a></li>
                     <li><a href="#" class="dropdown-link">Java Class Project</a></li>
                     <li><a href="#" class="dropdown-link">DS and Alg Project</a></li>
+                    <li><a href="#" class="dropdown-link">Wordle Clone</a></li>
                   </ul>
                 </div>
               </li>
               <li><a href = "index.html#blog-scroll" class = "nav-link" data-text = "Blog">Blog</a></li>
-              <li><a href = "index.html#contact-scroll" class = "nav-link" data-text = "Contact">Contact</a></li>
+              <li><a href = "#contact-scroll" class = "nav-link" data-text = "Contact">Contact</a></li>
             </ul>
         </nav>
       </header>
@@ -41,44 +42,163 @@
         <h1 class="project-title">Museum Database Application</h1>
         <hr class="Title-line">
         <br><br>
-        <section class="MDB-body">
+        <section class="project-body">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="slideshow-container">
-                        <div class="slideshow-nav">
-                            <a><i class="fas fa-arrow-right"></i></a>
-                            <a><i class="fas fa-arrow-left"></i></a>
-                        </div>
-                        <div class="carousel">
-                            <div class="item main">
-                              <img src="Images/Museum-Database.png" alt="Database" />
-                              <div class="caption">Museum Database on MySQL</div>
-                            </div>
-                        <div class="item">
-                              <img src="Images/museum_db_design.png" alt="Database Design" />
-                              <div class="caption">Database EERD Design</div>
-                            </div>
-                            <div class="item">
-                              <img src="Images/Python-MDB.png" alt="Python Script" />
-                              <div class="caption">Python Interface Script</div>
-                            </div>      
-                        </div>
+                  <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <a href="Images/museum_db_design.png" target="_blank"><img src="Images/museum_db_design.png" style="width:100%"></a>
+                      <div class="text">Database EERD Design</div>
                     </div>
-                <div class="specs">
-                    <h4 class="spec-title">Specs </h4>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <a href="Images/Museum-Database.png" target="_blank"><img src="Images/Museum-Database.png" style="width:100%"></a>
+                      <div class="text">Museum Database on MySQL</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <a href="Images/Python-MDB.png" target="_blank"><img src="Images/Python-MDB.png" style="width:100%"></a>
+                      <div class="text">Python Interface Script</div>
+                    </div>
+                  </div>
+                    <br>
+                    <div style="text-align:center">
+                      <span role="button" class="dot"></span> 
+                      <span role="button" class="dot"></span> 
+                      <span role="button" class="dot"></span> 
+                    </div>
                 </div>
+
             </div>
             <div class="col-lg-6">
                 <div class="project-desc">
-        
+                  <p>Working in a group of three software engineering students, my group and I developed a Python application that interfaces a MySQL database. The database is a conceptual design of an art 
+                    museum database. We conducted research on the many different art pieces that are existant in the database, and populated the database as a result of our research. A Python script was created to interface the database and allow 
+                    users with different access levels view and/or manipulate the database through this interface.
+                  </p>
+             
+                  <div class="specs">
+                    <h4 class="minor-title">Specs </h4>
+                    <hr class="minor-title-line">
+                    <div class="spec-container">
+                      <ul>
+                        <li class="spec-list"><strong>Software: </strong> Python, SQL</li>
+                        <li class="spec-list"><strong>Database: </strong> MySQL</li>
+                        <li class="spec-list"><strong>Dependencies: </strong> mysql.connector, tabulate</li>
+                        <li class="spec-list"><strong>Code Repository: &nbsp; </strong><span class="git-repo"><a href="https://github.com/Domgartner/Museum-Database-ENSF300" target="_blank"><i class="fab fa-github"></i></a></span></li>
+                      </ul>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
         </section>
+        <div class="proj-detail-cont">
+          <div class="proj-detail">
+            <h1 class="detail-title">Project Details</h1>
+            <hr class="Title-line">
+            <div class="detail-desc">
+              <p>This project was completed as an assignment for ENSF 300, a second year software engineering class on data management at the University of Calgary.
+                The conceptual design of the database consisted of the EERD diagram shown above. Eleven entities were created to represent the eleven data tables in the database, each 
+                with their corresponding attributes. Relations, primary keys, and foreign keys were used as necessary to create the desired data relationships. A Python script was created to 
+                allow users to interact with the database. The project is implemented in Python using the mysql-connector-python library to connect to a MySQL database. Three access levels were created. 
+                The admin, user, and guest. These access levels restrict certain actions and parts of the database from those who do not have the clearance to access them.
+                <br><br>
+                The admin has the highest clearance. They have access to the following: browsing and searching the collection, manipulating and managing the database, and managing users (blocking, suspending, adding).
+                The admin is required to log in to the database in order to gain access to these actions.
+                <br><br>
+                The user had mid-level clearance. They have access to the following: browsing and searching the collection and manipulating and managing the database.
+                The user must also log in to the database in order to manipulate and manage the database.
+                <br><br>
+                The guest has the lowest level of clearance. They have access to the following: browsing and searching the collection.
+                The guest does not have to log into the database and is instead allowed access through a default login.
+                <br><br>
+                When running the code, the program first establishes a connection to a MySQL database using the mysql.connector.connect Python library. 
+                The user is prompted to enter their login status, either as an admin, user, or a guest. If the user is an admin or user, they must enter a username and password to connect to the database. 
+                If the user is a guest, they are connected to the database using predefined login credentials. 
+                After the connection to the database is established, the script displays a menu of options depending on the user's login status.
+                <br><br>
+                Exception handling is implemented for incorrect query inputs and failed connection attempts to the database.
+              </p>
+              <br>
+              <h2 class="minor-title">Demonstration</h2>
+              <div class="demo-vid">
+                <video class="demo-video" width="708" height="420" controls>
+                  <source src="files/Museum-DB-demo.mp4" type="video/mp4">
+                  Video load failed.
+                </video>
+              </div>
+              <br><br>
+            </div>
+          </div>
+        </div>
 
+        <br><br>
+        <div class="scroll-link" id="contact-scroll"></div>
+        <br><br>
 
-
-    <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>  <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>  <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>
+        <section id = "Contact" class="contact-section">
+          <br><br><br>
+          <div class="title-desc">
+            <h1 class = "project-title">Contact Me</h1>
+          </div>
+          <hr class="Title-line">
+          <br>
+          <div class="section-start"></div>
+          <div class="contact-box">
+            <div class="input-group">
+              <div class="input-container">
+                <input type="text" name="text" autocomplete="off" class="input" id="name-input" required>
+                <label class="name-label" for="name-input">Name</label>
+              </div>
+              <div class="input-container">
+                <input name="email" type="text" class="input" id="email-input" required />
+                <label class="email-label" for="email-input">Email</label>
+              </div>
+              <div class="input-container">
+                <input name="subject" type="text" class="input" id="subject-input" required />
+                <label class="subject-label" for="subject-input">Subject</label>
+              </div>
+              <textarea name="message" class="input" placeholder="Message" style="width:350px;min-width: 150px; max-width: 550px; max-height: 320px;"></textarea>
+              <button type="submit" value="Submit" class="input send-button">Send</button>
+            </div>
+    
+            <div class="contact-farewell">
+              <h2 class="reach-out">Reach Out</h2>
+              <hr class="Title-line">
+              <br>
+              <p>Feel free to contact me at any time. I welcome all feedback and suggestions for this site or any of the projects here. </p>
+              <br><br>
+              <div class="location">
+                <p><i class="fas fa-map-pin"></i>&ensp; Calgary, Alberta, Canada</p>
+              </div>
+              <br>
+              <div class="phone">
+                <p><i class="fas fa-mobile"></i>&ensp; (403)-472-9927</p>
+              </div>
+              <br>
+              <div class="email">
+                <p><i class="fas fa-envelope"></i>&ensp; <u>dominicgartner1@gmail.com</u></p>
+              </div>
+              <br>
+              <div class="socials-icon">
+                <a href="https://github.com/Domgartner" target="_blank" id="git-logo"><i class="fab fa-github"></i></a>&nbsp;
+                <a href="https://www.linkedin.com/in/dominic-gartner-a34b25230/" target="_blank" id="git-logo"><i class="fab fa-linkedin"></i></a><br>
+              </div>
+            </div>
+          </div>
+          <br><br><br><br><br><br>
+        </section>
+         <!-- ============ BEGIN FOOTER ============ -->
+    <footer>
+      <hr>
+      <br>
+      <p>Copyright ©2023 Dominic Gartner</p>
+      <br>
+  </footer>
     <script src = "main.js"></script>
 </body>
 </html>

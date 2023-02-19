@@ -5,10 +5,22 @@
     color: white;
     box-sizing: border-box;
     font-family: var(--bs-font-sans-serif);
+    
 }
 body {
-    background: linear-gradient(98deg, rgb(43, 43, 43) 15%, rgb(158, 158, 158) 45%, #f5f5f5 50%);
+    background: linear-gradient(98deg, rgb(43, 43, 43) 21%, rgb(158, 158, 158) 45%, #f5f5f5 52%);
 }
+
+/* HERE FIX TO HAVE HAMBURGER NAV-DROP USING 786px SCREEN WIDTH */
+
+/* @media screen and (max-width: 786px) {
+    body {
+        background: linear-gradient(190deg, rgb(43, 43, 43) 50%, rgb(158, 158, 158) 45%, #f5f5f5 50%);
+    }
+} */
+
+/* HERE FIX TO HAVE HAMBURGER NAV-DROP USING 786px SCREEN WIDTH */
+
 html {
     scroll-behavior: smooth;}
 a {
@@ -138,6 +150,8 @@ nav#stroke ul li a:not(.dropdown-link)::after {
 /* Navbar + Header*/
   
 /* Navbar Project Dropdown */
+
+
 .project-dropdown-container {
     position: absolute;
     background-color: white;
@@ -168,6 +182,9 @@ a:hover + .project-dropdown-container, .project-dropdown-container:hover {
 #header #project-dropdown .dropdown-link:hover {
     background-color: rgb(15, 15, 15);
 }
+
+
+
 /* Navbar Project Dropdown */
 
 /* Hero */
@@ -372,6 +389,12 @@ nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
     line-height: 35px;
 }
 
+.personal-info h3 strong {
+    font-size: 28px;
+    color: #be8f5d;
+    font-weight: 900;
+}
+
 .personal-pic{
     width: 440px;
     border-radius: 10px 10px 10px 10px;
@@ -379,6 +402,8 @@ nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
 
 .about-desc {
     letter-spacing: 1px;
+    line-height: 23px;
+    font-size: 18px;
 }
 
 .education-about h2, .education-about h4 {
@@ -503,6 +528,28 @@ nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
     }
     .personal-pic {
         width: 500px;
+        margin: 0 auto;
+        display: block;
+        
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-info {
+        margin: 4%;
+        grid-row: 2;
+        width: 100%;
+        text-align: center;
+    }
+    .personal-pic {
+        width: 380px;
         margin: 0 auto;
         display: block;
         
@@ -634,7 +681,228 @@ nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
     border-color: #134acb;
 }
 /* Hover effects */
+
+
+/* Minor Skill */
+.minor-skill-title {
+    text-align: center;
+    color: black;
+    font-weight: 900;
+    font-size: 40px;
+    /* color: #be8f5d;
+    -webkit-text-stroke: 1px rgb(0, 0, 0); */
+}
+
+@keyframes slidein {
+    0% {
+        top: -400px;
+        opacity: 0;
+   }
+    100% {
+        opacity: 1;
+        top: 100px;
+   }
+}
+@keyframes slideout {
+    0% {
+        top: 0;
+        opacity: 1;
+   }
+    100% {
+        top: -400px;
+        opacity: 0;
+   }
+}
+
+#scene {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 1100px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 4px 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+}
+#scene #left-zone {
+    background: rgb(164, 122, 122);
+    height: 100%;
+    flex-grow: 0;
+    display: flex;
+    width: 350px;
+    align-items: center;
+    justify-content: left;
+}
+#scene #left-zone .list {
+    display: flex;
+    list-style: none;
+    align-content: stretch;
+    flex-direction: column;
+    flex-grow: 1;
+}
+#scene input[type="radio"] {
+    display: none;
+}
+#scene label {
+    display: block;
+    opacity: 0.6;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+}
+#scene label:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+#scene .content {
+    position: absolute;
+    left: 400px;
+    top: -400px;
+    width: 650px;
+    height: 200px;
+    animation-duration: 0.75s;
+    animation-name: slideout;
+    animation-timing-function: ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+}
+#scene .content .minor-skill-img {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 80px;
+    color: black;
+    margin-bottom: 10px;
+}
+#scene h1 {
+    color: #14ceb8;
+    font-size: 2em;
+}
+#scene .content p {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    color: rgb(63, 63, 63);
+    font-size: 1.3em;
+    line-height: 28px;
+}
+#scene .content p strong {
+    color: rgb(0, 0, 0);
+}
+
+#scene input[type="radio"]:checked ~ label {
+    opacity: 1;
+    animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    color: #14ceb8;
+    font-weight: 800;
+    border-right: solid 6px #14ceb8;
+}
+#scene input[type="radio"]:checked ~ .content {
+    animation-duration: 0.75s;
+    animation-name: slidein;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@media screen and (max-width: 1100px) {
+    #scene {
+        width: 900px;
+        height: 500px;
+    }
+    #scene .content p {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 1.1em;
+    }
+    #scene .content {
+        position: absolute;
+        left: 320px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 500px;
+        height: 200px;
+    }
+    #scene input[type="radio"]:checked ~ label {
+        font-weight: 400;
+        border-right: solid 3px #14ceb8;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #scene {
+        width: 600px;
+        height: 500px;
+    }
+    #scene .content p {
+        margin-left: 22%;
+        margin-right: 22%;
+        font-size: 1em;
+        line-height: 21px;
+    }
+    #scene .content {
+        left: 170px;
+        margin-left: 2%;
+        margin-right: 2%;
+        top: -400px;
+        width: 500px;
+        height: 300px;
+    }
+    #scene label {
+        text-align: left;
+        margin-left: 5%;
+        font-size: 20px;
+    }
+    #scene #left-zone {
+        width: 280px;
+    }
+    #scene h1 {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #scene {
+        width: 480px;
+        height: 500px;
+    }
+    #scene .content p {
+        margin-left: 28%;
+        margin-right: 28%;
+        font-size: 0.9em;
+    }
+    #scene .content {
+        left: 90px;
+        margin-left: 2%;
+        margin-right: 2%;
+        height: 300px;
+    }
+    #scene label {
+        text-align: left;
+        margin-left: 5%;
+        font-size: 15px;
+    }
+    #scene #left-zone {
+        width: 210px;
+    }
+    #scene h1 {
+        font-size: 1.18em;
+    }
+}
+
+/* Minor Skill */
+
 /* Skills Subsection */
+
 
 /* Projects and Blog Subsection */
 .projects-list-container {
@@ -877,29 +1145,12 @@ p.read-time, i.fa-clock {
     pointer-events: none;
 }
 
-#name-input:focus ~ .name-label, #name-input:valid ~ .name-label {
+#name-input:focus ~ .name-label, #name-input:valid ~ .name-label, #email-input:focus ~ .email-label, 
+#email-input:valid ~ .email-label, #subject-input:focus ~ .subject-label, #subject-input:valid ~ .subject-label {
     top: -0.5rem;
     left: 1rem;
     font-size: 0.9rem;
-    background-color: #181818;
-    padding: 0.2em;
-    color: #178582;
-}
-
-#email-input:focus ~ .email-label, #email-input:valid ~ .email-label {
-    top: -0.5rem;
-    left: 1rem;
-    font-size: 0.9rem;
-    background-color: #181818;
-    padding: 0.2em;
-    color: #178582;
-}
-
-#subject-input:focus ~ .subject-label, #subject-input:valid ~ .subject-label {
-    top: -0.5rem;
-    left: 1rem;
-    font-size: 0.9rem;
-    background-color: #181818;
+    background-color: #000000;
     padding: 0.2em;
     color: #178582;
 }
@@ -936,12 +1187,11 @@ p.read-time, i.fa-clock {
         .contact-farewell {
         margin: 4%;
         grid-row: 2;
-        width: 100%;
         }
 }
 
 .contact-farewell {
-    margin: 4%;
+    margin: 1%;
     grid-column: 2;
     width: 100%;
 }
