@@ -8,17 +8,85 @@ window.addEventListener('scroll', function() {
 });
 
 
-// window.addEventListener('scroll', function() {
-//     let header = document.getElementById('header');
-//     let projectDropdown = document.getElementById('project-dropdown');
-//     if (window.pageYOffset > 60) {
-//         header.classList.add('scrolled');
-//         projectDropdown.classList.add('scrolled');
-//     } else {
-//         header.classList.remove('scrolled');
-//         projectDropdown.classList.remove('scrolled');
-//     }
-// });
+
+
+const mq = window.matchMedia("(min-width: 786px)");
+const smallBack = document.querySelector(".background");
+window.addEventListener("resize", function() {
+  if (mq.matches) {
+    smallBack.style.display = "none";
+  }
+});
+
+const hamburger = document.querySelector('.fa-bars');
+const xMark = document.querySelector(".fa-times");
+const dropCont = document.querySelector('.small-nav-drop-cont');
+const background = document.querySelector('.background');
+xMark.style.display = "none";
+dropCont.style.display = "none";
+background.style.display = "none";
+hamburger.addEventListener('click', function() {
+    dropCont.style.display = "flex";
+    background.style.display = "block";
+    xMark.style.display = "";
+    hamburger.style.display = "none";
+});
+
+xMark.addEventListener('click', function() {
+  dropCont.style.display = "none";
+  background.style.display = "none";
+  xMark.style.display = "none";
+  hamburger.style.display = "";
+});
+
+const miniNavLinks = document.querySelectorAll(".mini-nav-link");
+const smallNav = document.querySelector(".small-nav-drop-cont");
+
+for (let i = 0; i < miniNavLinks.length; i++) {
+  miniNavLinks[i].addEventListener("click", function() {
+    console.log("CLICK");
+    smallNav.style.display = "none";
+    smallBack.style.display = "none";
+    xMark.style.display = "none";
+    hamburger.style.display = "block";
+  });
+};
+
+const miniProjDrop = document.getElementById("mini-project-drop");
+const miniProjects = document.getElementById("mini-project-dropdown");
+const downArrow = document.querySelector(".fa-chevron-down");
+const upArrow = document.querySelector(".fa-chevron-up");
+downArrow.style.display = "none";
+miniProjects.style.display = "none";
+miniProjDrop.addEventListener("click", function() {
+  if(miniProjects.style.display === "none"){
+    miniProjects.style.display = "flex";
+    miniProjects.style.flexDirection = "column";
+    upArrow.style.display = "none";
+    downArrow.style.display = "";
+  }
+  else {
+    miniProjects.style.display = "none";
+    upArrow.style.display = "";
+    downArrow.style.display = "none";
+  }
+});
+
+const miniProjectDrop = document.querySelector('#mini-project-drop');
+const miniProjectDropdown = document.querySelector('.mini-project-dropdown-container');
+const belowLinks = document.querySelectorAll('.below');
+miniProjectDrop.addEventListener('click', () => {
+  if (miniProjectDropdown.classList.contains('show')) {
+    miniProjectDropdown.classList.remove('show');
+    belowLinks.forEach(link => link.classList.remove('moved-down'));
+    belowLinks.forEach(link => link.classList.add('moved-up'));
+  } else {
+    miniProjectDropdown.classList.add('show');
+    belowLinks.forEach(link => link.classList.add('moved-down'));
+    belowLinks.forEach(link => link.classList.remove('moved-up'));
+  }
+});
+
 
 
 
@@ -60,83 +128,16 @@ window.addEventListener('scroll', function() {
   sections.forEach((section, index) => {
     if (isInViewport(section)) {
       navLinks.forEach(navLink => navLink.classList.remove('active'));
+      // miniNavLinks.forEach(navLink => navLink.classList.remove('active-mini'));
       if (index === 0 || window.pageYOffset < 200) {
         navLinks[0].classList.add('active');
+        // miniNavLinks[0].classList.add('active-mini');
       } else {
         navLinks[index].classList.add('active');
+        // miniNavLinks[index].classList.add('active-mini');
       }
     }
   });
 });
 
 
-
-
-
-// const prev = document.querySelector('.fa-arrow-right');
-// const next = document.querySelector('.fa-arrow-left');
-// const images = document.querySelector('.carousel').children;
-// const totalImages = images.length;
-// let index = 0;
-// prev.addEventListener('click', () => {
-//   nextImage('next');
-// })
-// next.addEventListener('click', () => {
-//   nextImage('prev');
-// })
-// function nextImage(direction) {
-//   if(direction == 'next') {
-//     index++;
-//     if(index == totalImages) {
-//       index = 0;
-//     }
-//   } else {
-//     if(index == 0) {
-//       index = totalImages - 1;
-//     } else {
-//       index--;
-//     }
-//   }
-//   for(let i = 0; i < images.length; i++) {
-//     images[i].classList.remove('main');
-//   }
-//   images[index].classList.add('main');
-// }
-
-
-
-
-let slideIndex = 0;
-let timeoutId;
-
-showSlides();
-function showSlides(index) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  if (index !== undefined) {
-    slideIndex = index;
-  } else {
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }    
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active-dot", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active-dot";
-  clearTimeout(timeoutId);
-  timeoutId = setTimeout(showSlides, 7800); 
-}
-
-let dotElements = document.getElementsByClassName("dot");
-for (let i = 0; i < dotElements.length; i++) {
-  dotElements[i].addEventListener("click", function() {
-    showSlides(i+1);
-  });
-}
