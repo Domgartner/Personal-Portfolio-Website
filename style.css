@@ -5,13 +5,10 @@
     color: white;
     box-sizing: border-box;
     font-family: var(--bs-font-sans-serif);
-    
 }
 body {
     background: linear-gradient(98deg, rgb(43, 43, 43) 21%, rgb(158, 158, 158) 45%, #f5f5f5 52%);
 }
-
-  
 html {
     scroll-behavior: smooth;}
 a {
@@ -81,6 +78,7 @@ ul {
     margin: auto;
     z-index: 9999;
     overflow-y: scroll;
+    animation: dropdown-animation 0.6s ease;
   }
 
 .small-nav-drop-cont a li, .small-nav-drop-cont li span, .fa-chevron-up, .fa-chevron-down {
@@ -141,36 +139,27 @@ nav#stroke .small-nav ul li a:after {
 
 .mini-nav-link.active-mini {
     color: #2ffedc;
-  }
-
-
+}
 
 .below.moved-down {
     transform: translateY(300%);
     transition: transform 0.3s ease;
-  }
+}
   
-  .mini-project-dropdown-container {
+.mini-project-dropdown-container {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-  }
+}
   
-  .mini-project-dropdown-container.show {
+.mini-project-dropdown-container.show {
     max-height: 300px;
-  }
+}
   
-  .below.moved-up {
+.below.moved-up {
     transform: translateY(0);
     transition: transform 0.3s ease;
-  }
-
-
-
-
-
-
-
+}
 
 #mini-project-dropdown {
     padding: 10px;
@@ -258,11 +247,6 @@ width: 60%;
 }
 /* Stroke on scroll */
   
-
-#project-dropdown .project-link {
-    text-align: center;
-}
-  
 #header {
     position: sticky;
     top: 0;
@@ -306,40 +290,87 @@ width: 60%;
         padding: 10px 15px;
         font-size: 1.08em;
         }
+    .dropbtn a {
+        font-size: 1.08em;
+    }
+    .dropbtn {
+        padding: 10px 15px;
+    }
+    
 }
 /* Navbar + Header*/
   
 /* Navbar Project Dropdown */
 
-.project-dropdown-container {
+.dropbtn {
+    color: #BFA181;
+    cursor: pointer;
+    padding: 14px 50px;
+
+}
+
+.dropbtn a {
+    font-size: 1em;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+  
+.dropdown-content {
+    display: none;
+    top: 40px;
     position: absolute;
-    background-color: white;
-    padding: 0.6%;
-    height: auto;
-    width: fit-content;
-    border: 1px solid #0A1828;
-    z-index: 1;
-    right:350px;
-    top: 60px;
-    overflow: hidden;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.3s ease-in-out;
-}
-
-#project-dropdown {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-a:hover + .project-dropdown-container, .project-dropdown-container:hover {
-    display: block;
-    transform: scaleY(1);
-}
-#header #project-dropdown .dropdown-link:hover {
+    border: 1px solid #717171;
+    border-radius: 4px 4px 4px 4px;
+    padding: 2px;
     background-color: rgb(15, 15, 15);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: dropdown-animation 0.6s ease;
+  }
+  
+  @keyframes dropdown-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+#header.scrolled .dropdown-content {
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+#header.scrolled .dropdown-content a {
+    color: black;
+}
+#header.scrolled .dropdown-content a:hover {
+    background-color: #cccccc;
+}
+
+.dropdown-content a {
+    color: white;
+    width: 100%;
+    padding: 12px 16px;
+    text-align: left;
+    display: block;
+}
+  
+.dropdown-content a:hover {background-color: #717171}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 /* Navbar Project Dropdown */
 
@@ -548,6 +579,7 @@ nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
     letter-spacing: 1px;
     line-height: 23px;
     font-size: 18px;
+    margin-left: 5%;
 }
 
 .education-about h2, .education-about h4 {
@@ -655,8 +687,8 @@ nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
         width: 300px;
     }
 }
-@media screen and (max-width: 856px) {
 
+@media screen and (max-width: 856px) {
     .about-container {
         display: flex;
         flex-direction: column;
@@ -666,6 +698,7 @@ nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
     .about-info {
         margin: 4%;
         grid-row: 2;
+        margin-left: 10%;
         width: 100%;
         text-align: center;
     }
@@ -673,11 +706,9 @@ nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
         width: 500px;
         margin: 0 auto;
         display: block;
-        
     }
 }
 @media screen and (max-width: 750px) {
-
     .about-container {
         display: flex;
         flex-direction: column;
@@ -694,7 +725,6 @@ nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
         width: 380px;
         margin: 0 auto;
         display: block;
-        
     }
 }
 /* About Subsection */
@@ -979,7 +1009,6 @@ nav#stroke ul li a:not(#project-drop):not(.dropdown-link):not(.logo-link):after{
         font-size: 1.2em;
     }
 }
-
 @media screen and (max-width: 600px) {
     #scene {
         width: 480px;
@@ -1139,17 +1168,14 @@ p.read-time, i.fa-clock {
     .proj-lan {
         font-size: 0.8em;
     }
-
     .projects-list-container p {
         font-size: 0.8em;
         /* margin: 5px; */
     }
-    
     .projects-list-container h2 {
         font-size: 1em;
         margin: 5px;
     }
-
     .sort-link {
         float: left;
         text-align: right;

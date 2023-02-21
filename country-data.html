@@ -7,6 +7,7 @@
     <title>Country Data</title>
     <!-- ======= CSS FILE ============-->
     <link rel = "stylesheet" href = "secondary.css"/>
+    <link rel="icon" href="Images/favicon.ico">
     <!-- ======= CSS FILE ============-->
 
     <!-- ======== FONT AWESOME KIT ===========-->
@@ -22,19 +23,18 @@
               <li><a href = "index.html#" class = "nav-link">Home</a></li>
               <li><a href = "index.html#about-scroll" class = "nav-link">About</a></li>
               <li><a href = "index.html#skills-scroll" class = "nav-link">Skills</a></li>
-              <li><a href = "index.html#projects-scroll" class = "nav-link project-drop" id="project-drop"><span>Projects </span>&nbsp;<i class="fas fa-caret-down"></i></a>
-                <div class="project-dropdown-container">
-                  <ul id="project-dropdown">
-                    <li><a href="MDB-details.html" class="dropdown-link">Museum Database</a></li>
-                    <li><a href="country-data.html" class="dropdown-link">Country Data</a></li>
-                    <li><a href="#" class="dropdown-link">Java Class Project</a></li>
-                    <li><a href="#" class="dropdown-link">DS and Alg Project</a></li>
-                    <li><a href="#" class="dropdown-link">Wordle Clone</a></li>
-                  </ul>
+              <div class="dropdown">
+                <a class="dropbtn nav-link project-drop" href = "index.html#projects-scroll" id="project-drop"><span>Projects</span>&nbsp; <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                  <a href="MDB-details.html">Museum Database</a>
+                  <a href="country-data.html">Country Data</a>
+                  <a href="#">Java Class Project</a>
+                  <a href="#">DS and Alg Project</a>
+                  <a href="#">Wordle Clone</a>
                 </div>
-              </li>
+              </div>
               <li><a href = "index.html#blog-scroll" class = "nav-link" data-text = "Blog">Blog</a></li>
-              <li><a href = "#contact-scroll" class = "nav-link" data-text = "Contact">Contact</a></li>
+              <li><a href = "#contact-scroll" class = "nav-link contact-nav-link" data-text = "Contact">Contact</a></li>
             </ul>
             <div class="small-nav">
               <a href ="index.html#" class = "logo-link">Dominic's Portfolio</a>
@@ -169,7 +169,8 @@
                 <input name="subject" type="text" class="input" id="subject-input" required />
                 <label class="subject-label" for="subject-input">Subject</label>
               </div>
-              <textarea name="message" class="input" placeholder="Message" style="width:350px;min-width: 150px; max-width: 550px; max-height: 320px;"></textarea>
+              <div class="section-start-contact"></div>
+              <textarea name="message" class="input" placeholder="Message" style="width:350px;min-width: 244px; max-width: 550px; max-height: 320px;"></textarea>
               <button type="submit" value="Submit" class="input send-button">Send</button>
             </div>
     
@@ -207,5 +208,24 @@
       <br>
   </footer>
     <script src = "main.js"></script>
+    <script src="secondary.js"></script>
+    <script>
+      const cSection = document.querySelector('.section-start-contact');
+      const cNavLink = document.querySelector('.contact-nav-link');
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+      window.addEventListener('scroll', function() {
+          if (isInViewport(cSection)) {
+            cNavLink.classList.add('active');
+            } else {
+              cNavLink.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

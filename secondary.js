@@ -31,3 +31,38 @@ for (let i = 0; i < dotElements.length; i++) {
     showSlides(i+1);
   });
 }
+
+
+  // let slideIndexBlog = 0;
+  // let timeoutIdBlog;
+  // showSlidesBlog();
+  // function showSlidesBlog(index) {
+  //   let i;
+  //   let slides = document.getElementsByClassName("mySlides-blog");
+  //   let dots = document.getElementsByClassName("dot");
+  //   for (i = 0; i < slides.length; i++) {
+  //     slides[i].style.display = "none";  
+  //   }
+  //   if (index !== undefined) {
+  //     slideIndexBlog = index;
+  //   } else {
+  //     slideIndexBlog++;
+  //     if (slideIndexBlog > slides.length) {
+  //       slideIndexBlog = 1;
+  //     }    
+  //   }
+  //   for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active-dot", "");
+  //   }
+  //   slides[slideIndexBlog-1].style.display = "block";  
+  //   dots[slideIndexBlog-1].className += " active-dot";
+  //   clearTimeout(timeoutIdBlog);
+  //   timeoutIdBlog = setTimeout(showSlides, 7800); 
+  // }
+  
+  // let dotElementsBlog = document.getElementsByClassName("dot");
+  // for (let i = 0; i < dotElements.length; i++) {
+  //   dotElementsBlog[i].addEventListener("click", function() {
+  //     showSlides(i+1);
+  //   });
+  // }

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <meta content = "Personal portfolio website of Dominic Gartner, a software engineering student at the University of Calgary." name = "description">
     <title>Dominic Gartner Portfolio</title>
-    <!-- ======= CSS FILE ============-->
+    <!-- ======= CSS FILE AND FAVICON ICON ============-->
     <link rel = "stylesheet" href = "style.css"/>
-    <!-- ======= CSS FILE ============-->
+    <link rel="icon" href="Images/favicon.ico">
+    <!-- ======= CSS FILE AND FAVICON ICON ============-->
 
     <!-- ======== FONT AWESOME KIT ===========-->
     <script src="https://kit.fontawesome.com/48e1f66350.js" crossorigin="anonymous"></script>
@@ -23,20 +24,20 @@
             <li><a href = "#" class = "nav-link active">Home</a></li>
             <li><a href = "#about-scroll" class = "nav-link">About</a></li>
             <li><a href = "#skills-scroll" class = "nav-link">Skills</a></li>
-            <li><a href = "#projects-scroll" class = "nav-link project-drop" id="project-drop"><span>Projects </span>&nbsp;<i class="fas fa-caret-down"></i></a>
-              <div class="project-dropdown-container">
-                <ul id="project-dropdown">
-                  <li><a href="MDB-details.html" class="dropdown-link">Museum Database</a></li>
-                  <li><a href="country-data.html" class="dropdown-link">Country Data</a></li>
-                  <li><a href="#" class="dropdown-link">Java Class Project</a></li>
-                  <li><a href="#" class="dropdown-link">DS and Alg Project</a></li>
-                  <li><a href="#" class="dropdown-link">Wordle Clone</a></li>
-                </ul>
+              <div class="dropdown">
+                <a class="dropbtn nav-link project-drop" href = "#projects-scroll" id="project-drop"><span>Projects</span>&nbsp; <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                  <a href="MDB-details.html">Museum Database</a>
+                  <a href="country-data.html">Country Data</a>
+                  <a href="#">Java Class Project</a>
+                  <a href="#">DS and Alg Project</a>
+                  <a href="#">Wordle Clone</a>
+                </div>
               </div>
-            </li>
             <li><a href = "#blog-scroll" class = "nav-link" data-text = "Blog">Blog</a></li>
             <li><a href = "#contact-scroll" class = "nav-link" data-text = "Contact">Contact</a></li>
           </ul>
+
           <div class="small-nav">
             <a href ="#" class = "logo-link">Dominic's Portfolio</a>
             <span class="hamburger-icon"><i class="fas fa-bars"></i></span>
@@ -297,7 +298,7 @@
                       <br><br>
                       <p>I have been learning web development both through school and personal projects. I have great knowledge in <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. 
                         I am confident in my ability to develop interactive and responsive web applications.
-                        I am currently learning <strong>React</strong>, and <strong>TypeScript</strong>. Web development is a large interest of mine and I hope to continue learning and expand my skills in this area.
+                        I am currently learning <strong>React</strong> and <strong>TypeScript</strong>. Web development is a large interest of mine and I will continue learning and expanding my skills in this area.
                       </p>
                     </div>
                 </li>
@@ -565,7 +566,7 @@
             <input name="subject" type="text" class="input" id="subject-input" required />
             <label class="subject-label" for="subject-input">Subject</label>
           </div>
-          <textarea name="message" class="input" placeholder="Message" style="width:350px;min-width: 150px; max-width: 550px; max-height: 320px;"></textarea>
+          <textarea name="message" class="input" placeholder="Message" style="width:350px;min-width: 244px; max-width: 550px; max-height: 320px;"></textarea>
           <button type="submit" value="Submit" class="input send-button">Send</button>
         </div>
 

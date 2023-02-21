@@ -7,6 +7,7 @@
     <title>Blog 1</title>
     <!-- ======= CSS FILE ============-->
     <link rel = "stylesheet" href = "secondary.css"/>
+    <link rel="icon" href="Images/favicon.ico">
     <!-- ======= CSS FILE ============-->
 
     <!-- ======== FONT AWESOME KIT ===========-->
@@ -16,32 +17,175 @@
 <body>
      <!-- =========== HEADER =========== -->
      <header id="header" class="fix-top">
-        <nav id = "stroke" class = "nav">
-            <ul class="navbar-container">
-              <li><a href ="index.html#" class = "logo-link">Dominic's Portfolio</a></li>
-              <li><a href = "index.html#" class = "nav-link active">Home</a></li>
-              <li><a href = "index.html#about-scroll" class = "nav-link">About</a></li>
-              <li><a href = "index.html#skills-scroll" class = "nav-link">Skills</a></li>
-              <li><a href = "index.html#projects-scroll" class = "nav-link project-drop" id="project-drop"><span>Projects </span>&nbsp;<i class="fas fa-caret-down"></i></a>
-                <div class="project-dropdown-container">
-                  <ul id="project-dropdown">
-                    <li><a href="MDB-details.html" class="dropdown-link">Museum Database</a></li>
-                    <li><a href="country-data.html" class="dropdown-link">Country Data</a></li>
-                    <li><a href="#" class="dropdown-link">Java Class Project</a></li>
-                    <li><a href="#" class="dropdown-link">DS and Alg Project</a></li>
+      <nav id = "stroke" class = "nav">
+          <ul class="navbar-container">
+            <li><a href ="index.html#" class = "logo-link">Dominic's Portfolio</a></li>
+            <li><a href = "index.html#" class = "nav-link">Home</a></li>
+            <li><a href = "index.html#about-scroll" class = "nav-link">About</a></li>
+            <li><a href = "index.html#skills-scroll" class = "nav-link">Skills</a></li>
+            <div class="dropdown">
+              <a class="dropbtn nav-link project-drop" href = "index.html#projects-scroll" id="project-drop"><span>Projects</span>&nbsp; <i class="fas fa-caret-down"></i></a>
+              <div class="dropdown-content">
+                <a href="MDB-details.html">Museum Database</a>
+                <a href="country-data.html">Country Data</a>
+                <a href="#">Java Class Project</a>
+                <a href="#">DS and Alg Project</a>
+                <a href="#">Wordle Clone</a>
+              </div>
+            </div>
+            <li><a href = "index.html#blog-scroll" class = "nav-link" data-text = "Blog">Blog</a></li>
+            <li><a href = "#contact-scroll" class = "nav-link contact-blog-link" data-text = "Contact">Contact</a></li>
+          </ul>
+          <div class="small-nav">
+            <a href ="index.html#" class = "logo-link">Dominic's Portfolio</a>
+            <span class="hamburger-icon"><i class="fas fa-bars"></i></span>
+            <span class="x-icon"><i class="fas fa-times"></i></span>
+            <div class="small-nav-drop-cont">
+              <ul class="mini-navbar-container">
+                <a href = "index.html#" class = "mini-nav-link"><li>Home</li></a>
+                <a href = "index.html#about-scroll" class = "mini-nav-link"><li>About</li></a>
+                <a href = "index.html#skills-scroll" class = "mini-nav-link"><li>Skills</li></a>
+                <li class = "mini-project-drop" id="mini-project-drop"><span id="colour"> &nbsp; Projects</span> &nbsp; <i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i>
+                <div class="mini-project-dropdown-container">
+                  <ul id="mini-project-dropdown">
+                    <a href="MDB-details.html" class="mini-dropdown-link"><li>Museum Database</li></a>
+                    <a href="country-data.html" class="mini-dropdown-link"><li>Country Data</li></a>
+                    <a href="#" class="mini-dropdown-link"><li>Java Class Project</li></a>
+                    <a href="#" class="mini-dropdown-link"><li>DS and Alg Project</li></a>
+                    <a href="#" class="mini-dropdown-link"><li>Wordle Clone</li></a>
                   </ul>
                 </div>
-              </li>
-              <li><a href = "index.html#blog-scroll" class = "nav-link" data-text = "Blog">Blog</a></li>
-              <li><a href = "index.html#contact-scroll" class = "nav-link" data-text = "Contact">Contact</a></li>
-            </ul>
-        </nav>
-      </header>
+                </li>
+                <a href = "index.html#blog-scroll" class = "mini-nav-link below" data-text = "Blog"><li>Blog</li></a>
+                <a href = "#contact-scroll" class = "mini-nav-link below" data-text = "Contact"><li>Contact</li></a>
+              </ul>
+              </ul>
+            </div>
+          </div>
+          <div class="background"></div>
+      </nav>
+    </header>
     <!-- =========== END HEADER ============ -->
-    
+    <div class="blog-body">
+      <br><br><br>
+      <h1 class="blog-title">Blog 1 Coming Soon...</h1>
+
+      <br><br><br><br><br><br>
+      <div class="blog-content-cont">
+        <div class="indiv-blog-cont">
+          <div class="entry-name-date">
+            <h3 class="entry-name">Entry example</h3>
+            <h4 class="entry-date">Date Here</h4>
+          </div>
+          <hr class="entry-line">
+          <p class="entry-content">
+            &nbsp; Blog content here...
+          </p>
+        </div>
+
+
+        <div class="indiv-blog-cont">
+          <div class="entry-name-date">
+            <h3 class="entry-name">Entry example</h3>
+            <h4 class="entry-date">Date Here</h4>
+          </div>
+          <hr class="entry-line">
+          <div class="image-entry">
+            <img class="entry-img" src="Images/coming-soon.png">
+
+            <p class="entry-content-img">
+              &nbsp; Blog content here... 
+            </p>
+          </div>
+         
+        </div>
+
+
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
 
 
 
+
+    <section id = "Contact" class="contact-section">
+      <br><br><br>
+      <div class="title-desc">
+        <h1 class = "project-title">Contact Me</h1>
+      </div>
+      <hr class="Title-line">
+      <br>
+      <div class="contact-box">
+        <div class="input-group">
+          <div class="input-container">
+            <input type="text" name="text" autocomplete="off" class="input" id="name-input" required>
+            <label class="name-label" for="name-input">Name</label>
+          </div>
+          <div class="input-container">
+            <input name="email" type="text" class="input" id="email-input" required />
+            <label class="email-label" for="email-input">Email</label>
+          </div>
+          <div class="input-container">
+            <input name="subject" type="text" class="input" id="subject-input" required />
+            <label class="subject-label" for="subject-input">Subject</label>
+          </div>
+          <textarea name="message" class="input" placeholder="Message" style="width:350px;min-width: 244px; max-width: 550px; max-height: 320px;"></textarea>
+          <button type="submit" value="Submit" class="input send-button">Send</button>
+          <div class="section-blog-contact"></div>
+        </div>
+
+        <div class="contact-farewell">
+          <h2 class="reach-out">Reach Out</h2>
+          <hr class="Title-line">
+          <br>
+          <p>Feel free to contact me at any time. I welcome all feedback and suggestions for this site or any of the projects here. </p>
+          <br><br>
+          <div class="location">
+            <p><i class="fas fa-map-pin"></i>&ensp; Calgary, Alberta, Canada</p>
+          </div>
+          <br>
+          <div class="phone">
+            <p><i class="fas fa-mobile"></i>&ensp; (403)-472-9927</p>
+          </div>
+          <br>
+          <div class="email">
+            <p><i class="fas fa-envelope"></i>&ensp; <u>dominicgartner1@gmail.com</u></p>
+          </div>
+          <br>
+          <div class="socials-icon">
+            <a href="https://github.com/Domgartner" target="_blank" id="git-logo"><i class="fab fa-github"></i></a>&nbsp;
+            <a href="https://www.linkedin.com/in/dominic-gartner-a34b25230/" target="_blank" id="git-logo"><i class="fab fa-linkedin"></i></a><br>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br><br><br>
+    </section>
+        <!-- ============ BEGIN FOOTER ============ -->
+    <footer class="blog-footer">
+      <hr>
+      <br>
+      <p>Copyright ©2023 Dominic Gartner</p>
+      <br>
+    </footer>
     <script src = "main.js"></script>
-</body>
+    <script src="secondary.js"></script>
+    <script>
+      const blogContLink = document.querySelector('.section-blog-contact');
+      const blogCont = document.querySelector('.contact-blog-link');
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+      window.addEventListener('scroll', function() {
+          if (isInViewport(blogContLink)) {
+            blogCont.classList.add('active');
+            } else {
+              blogCont.classList.remove('active');
+            }
+        });
+    </script>
+  </body>
 </html>

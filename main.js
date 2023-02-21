@@ -129,7 +129,7 @@ window.addEventListener('scroll', function() {
     if (isInViewport(section)) {
       navLinks.forEach(navLink => navLink.classList.remove('active'));
       // miniNavLinks.forEach(navLink => navLink.classList.remove('active-mini'));
-      if (index === 0 || window.pageYOffset < 200) {
+      if (window.pageYOffset < 200) {
         navLinks[0].classList.add('active');
         // miniNavLinks[0].classList.add('active-mini');
       } else {
@@ -139,5 +139,3 @@ window.addEventListener('scroll', function() {
     }
   });
 });
-
-
