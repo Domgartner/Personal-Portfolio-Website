@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta content = "Personal portfolio website of Dominic Gartner, a software engineering student at the University of Calgary." name = "description">
+    <title>Obituary Web App</title>
+    <!-- ======= CSS FILE ============-->
+    <link rel = "stylesheet" href = "secondary.css"/>
+    <link rel="icon" href="Images/favicon.ico">
+    <!-- ======= CSS FILE ============-->
+
+    <!-- ======== FONT AWESOME KIT ===========-->
+    <script src="https://kit.fontawesome.com/48e1f66350.js" crossorigin="anonymous"></script>
+    <!-- ======== FONT AWESOME KIT ===========-->
+</head>
+<body>
+  <div class="clouds"></div>
+     <!-- =========== HEADER =========== -->
+     <header id="header" class="fix-top">
+        <nav id = "stroke" class = "nav">
+            <ul class="navbar-container">
+              <li><a href ="index.html#" class = "logo-link">Dominic's Portfolio</a></li>
+              <li><a href = "index.html#" class = "nav-link">Home</a></li>
+              <li><a href = "index.html#about-scroll" class = "nav-link">About</a></li>
+              <li><a href = "index.html#skills-scroll" class = "nav-link">Skills</a></li>
+              <div class="dropdown">
+                <a class="dropbtn nav-link project-drop" href = "index.html#projects-scroll" id="project-drop"><span>Projects</span>&nbsp; <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                  <a href="MDB-details.html" >Museum Database</a>
+                  <a href="country-data.html">Country Data</a>
+                  <a href="animalShelter.html">Java Animal Shelter</a>
+                  <a href="DsAlg-proj.html">DS and Alg Project</a>
+                  <a href="obituary.html" class="current-proj">Obituary Site</a>
+                  <a href="https://domgartner-wordle.netlify.app/" target="_blank">Wordle Clone &nbsp;<i class="fa fa-external-link"></i></a>
+                  <a href="https://dominicgartner-lotion.netlify.app/notes" target="_blank">Notes App &nbsp;<i class="fa fa-external-link"></i></a>
+                </div>
+              </div>
+              <li><a href = "index.html#blog-scroll" class = "nav-link" data-text = "Blog">Blog</a></li>
+              <li><a href = "#contact-scroll" class = "nav-link contact-nav-link" data-text = "Contact">Contact</a></li>
+            </ul>
+            <div class="small-nav">
+              <a href ="index.html#" class = "logo-link">Dominic's Portfolio</a>
+              <span class="hamburger-icon"><i class="fas fa-bars"></i></span>
+              <span class="x-icon"><i class="fas fa-times"></i></span>
+              <div class="small-nav-drop-cont">
+                <ul class="mini-navbar-container">
+                  <a href = "index.html#" class = "mini-nav-link"><li>Home</li></a>
+                  <a href = "index.html#about-scroll" class = "mini-nav-link"><li>About</li></a>
+                  <a href = "index.html#skills-scroll" class = "mini-nav-link"><li>Skills</li></a>
+                  <li class = "mini-project-drop" id="mini-project-drop"><span id="colour"> &nbsp; Projects</span> &nbsp; <i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i>
+                  <div class="mini-project-dropdown-container">
+                    <ul id="mini-project-dropdown">
+                      <a href="MDB-details.html" class="mini-dropdown-link"><li>Museum Database</li></a>
+                      <a href="country-data.html" class="mini-dropdown-link"><li>Country Data</li></a>
+                      <a href="animalShelter.html" class="mini-dropdown-link"><li>Java Class Project</li></a>
+                      <a href="DsAlg-proj.html" class="mini-dropdown-link"><li>DS and Alg Project</li></a>
+                      <a href="obituary.html" class="mini-dropdown-link"><li>Obituary Site</li></a>
+                      <a href="https://domgartner-wordle.netlify.app/" target="_blank" class="mini-dropdown-link"><li>Wordle Clone &nbsp;<i class="external-link-small fa fa-external-link"></i></li></a>
+                      <a href="https://dominicgartner-lotion.netlify.app/notes" target="_blank" class="mini-dropdown-link"><li>Notes App &nbsp;<i class="external-link-small fa fa-external-link"></i></li></a>
+                    </ul>
+                  </div>
+                  </li>
+                  <a href = "index.html#blog-scroll" class = "mini-nav-link below" data-text = "Blog"><li>Blog</li></a>
+                  <a href = "#contact-scroll" class = "mini-nav-link below" data-text = "Contact"><li>Contact</li></a>
+                </ul>
+                </ul>
+              </div>
+            </div>
+            <div class="background"></div>
+        </nav>
+      </header>
+    <!-- =========== END HEADER ============ -->
+    <h1 class="project-title">Obituary Web Application</h1>
+        <hr class="Title-line">
+        <br><br>
+        <section class="project-body">
+            <div class="row">
+                <div class="col-lg-6">
+                  <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 4</div>
+                      <a><img class="slideshow-image" src="Images/obituary-outline.png" style="width:100%" alt="architecture Overview"></a>
+                      <div class="text">architecture Overview</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 4</div>
+                      <a><img class="slideshow-image" src="Images/obituary-ex.png" style="width:100%" alt="web page screenshot"></a>
+                      <div class="text">Screenshot of web app. Obituary written with ChatGPT api</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 4</div>
+                        <a><img class="slideshow-image" src="Images/populated-obituary.png" style="width:100%" alt="populated obituary page"></a>
+                        <div class="text">Populated Obituary Page</div>
+                      </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">4 / 4</div>
+                      <a><img class="slideshow-image" src="Images/obituary-backend.png" style="width:100%" alt="obituary backend"></a>
+                      <div class="text">Obituary backend created in Python</div>
+                    </div>
+                    
+                  </div>
+                    <br>
+                    <div style="text-align:center">
+                      <span role="button" class="dot"></span> 
+                      <span role="button" class="dot"></span> 
+                      <span role="button" class="dot"></span> 
+                      <span role="button" class="dot"></span> 
+                    </div>
+                </div>
+
+
+                  <!-- ============ ------- ============ -->
+                <div id="myModal" class="modal">
+                    <!-- <span id="close">&times;</span> -->
+                    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+                <!-- ============ -------- ============ -->
+  
+                
+            </div>
+            <div class="col-lg-6">
+                <div class="project-desc">
+                  <p>Working with a partner, we created an obituary application that allows the user to create obituaries for the deceased. The application has an AWS backend, which was configured 
+                    with Terraform. The ChatGPT api was implemented to write the obituaries based on user inputs.
+                  </p>
+             
+                  <div class="specs">
+                    <h4 class="minor-title">Specs </h4>
+                    <hr class="Title-line">
+                    <div class="spec-container">
+                      <ul>
+                        <li class="spec-list"><strong>Software: </strong> React, Python, Terraform</li>
+                        <li class="spec-list"><strong>Dependencies: </strong> None</li>
+                        <li class="spec-list"><strong>Code Repository: &nbsp; </strong><span class="git-repo"><a href="https://github.com/Domgartner/Last-Show-safe" target="_blank"><i class="fab fa-github"></i></a></span></li>
+                      </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <div class="proj-detail-cont">
+          <div class="proj-detail">
+            <h1 class="detail-title">Project Details</h1>
+            <hr class="Title-line">
+            <div class="detail-desc">
+              <p> This project was completed as the final assignment for ENSF 381 at the University of Calgary. 
+                <br><br>
+                This obituary application was created in React, with a backend on AWS. The AWS backend was configured through Terraform. Many AWS services were used in the creation of the web 
+                application, including: </p>
+                <ul>
+                    <li>Lambda</li>
+                    <li>Cloudinary</li>
+                    <li>AWS Systems Manager Parameter Store</li>
+                    <li>Amazon Polly</li>
+                    <li>Dynamo DB</li>
+                </ul>
+                <p>
+                  AWS services such as AWS Systems Manager Parameter Store were used for security to store private keys used to access the AWS 
+                  functions and database as well as the ChatGPT api.  
+                  <br><br>
+                    When creating a new obituary, the user is prompted to enter information about the deceased. This information is passed through a chatGPT prompt where an obituary is 
+                    automatically created. Using amazon polly, the user may listen to the obituary as it is read to them. Users may open and close different obituaries as they wish. 
+                    Obituaries are stored on the AWS backend.
+                </p>
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <br><br>
+        <div class="scroll-link" id="contact-scroll"></div>
+        <br><br>
+
+        <section id = "Contact" class="contact-section">
+          <br><br><br>
+          <div class="title-desc">
+            <h1 class = "project-title" id="cont-title">Contact Me</h1>
+          </div>
+          <hr class="Title-line" id="cont-line">
+          <br>
+          <div class="contact-box">
+            <div class="input-group">
+              <div class="input-container">
+                <input type="text" name="text" autocomplete="off" class="input" id="name-input" required>
+                <label class="name-label" for="name-input">Name</label>
+              </div>
+              <div class="input-container">
+                <input name="email" type="text" class="input" id="email-input" required />
+                <label class="email-label" for="email-input">Email</label>
+              </div>
+              <div class="input-container">
+                <input name="subject" type="text" class="input" id="subject-input" required />
+                <label class="subject-label" for="subject-input">Subject</label>
+              </div>
+              <div class="section-start-contact"></div>
+              <textarea name="message" class="input" placeholder="Message" id="message-input" style="width:350px;min-width: 244px; max-width: 550px; max-height: 320px;"></textarea>
+              <button type="submit" value="Submit" class="input send-button" id="sender">Send</button>
+            </div>
+    
+            <div class="contact-farewell">
+              <h2 class="reach-out">Reach Out</h2>
+              <hr class="Title-line" id="cont-line">
+              <br>
+              <p>Feel free to contact me at any time. I welcome all feedback and suggestions for this site or any of the projects here. </p>
+              <br><br>
+              <div class="location">
+                <p><i class="fas fa-map-pin"></i>&ensp; Calgary, Alberta, Canada</p>
+              </div>
+              <br>
+              <div class="phone">
+                <p><i class="fas fa-mobile"></i>&ensp; (403)-472-9927</p>
+              </div>
+              <br>
+              <div class="email">
+                <p><i class="fas fa-envelope"></i>&ensp; <u>dominicgartner1@gmail.com</u></p>
+              </div>
+              <br>
+              <div class="socials-icon">
+                <a href="https://github.com/Domgartner" target="_blank" id="git-logo"><i class="fab fa-github"></i></a>&nbsp;
+                <a href="https://www.linkedin.com/in/dominic-gartner-a34b25230/" target="_blank" id="git-logo"><i class="fab fa-linkedin"></i></a><br>
+              </div>
+            </div>
+          </div>
+          <br><br><br><br><br><br>
+        </section>
+         <!-- ============ BEGIN FOOTER ============ -->
+    <footer>
+      <hr>
+      <br>
+      <p>Copyright ©2023 Dominic Gartner</p>
+      <br>
+  </footer>
+    <script src = "main.js"></script>
+    <script src="secondary.js"></script>
+    <script>
+      const cSection = document.querySelector('.section-start-contact');
+      const cNavLink = document.querySelector('.contact-nav-link');
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+      window.addEventListener('scroll', function() {
+          if (isInViewport(cSection)) {
+            cNavLink.classList.add('active');
+            } else {
+              cNavLink.classList.remove('active');
+            }
+        });
+    </script>
+     <script type="text/javascript"
+     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+   </script>
+   <script type="text/javascript">
+     (function(){
+       emailjs.init("2-Fjj8mnfXx1xrKc5");
+     })();
+   </script>
+</body>
+</html>

@@ -66,3 +66,72 @@ for (let i = 0; i < dotElements.length; i++) {
   //     showSlides(i+1);
   //   });
   // }
+
+  
+
+  // Get all elements with class "slideshow-image"
+const slideshowImages = document.querySelectorAll(".slideshow-image");
+
+// Add click event listeners to open the modal for each image
+slideshowImages.forEach((image) => {
+  image.addEventListener("click", () => {
+    openModal(image.src, image.alt);
+  });
+});
+
+// Close modal when clicking outside of the modal content
+// closeModal.addEventListener("click", () => {
+//   modal.style.display = "none";
+// });
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+
+
+
+
+// let currentIndex = 0;
+// let images = document.querySelectorAll(".slideshow-image");
+
+// function openModal(imageIndex) {
+//   modal.style.display = "block";
+//   modalImg.src = images[imageIndex].src;
+//   captionText.innerHTML = images[imageIndex].alt;
+//   currentIndex = imageIndex;
+// }
+
+// function plusSlides(n) {
+//   let newIndex = currentIndex + n;
+
+//   if (newIndex < 0) {
+//     newIndex = images.length - 1;
+//   } else if (newIndex >= images.length) {
+//     newIndex = 0;
+//   }
+
+//   openModal(newIndex);
+// }
+
+// let prevButton = document.querySelector(".prev");
+// let nextButton = document.querySelector(".next");
+
+// prevButton.addEventListener("click", function () {
+//   plusSlides(-1);
+// });
+
+// nextButton.addEventListener("click", function () {
+//   plusSlides(1);
+// });
+
+// // Close modal when clicking outside of the modal content
+// window.addEventListener("click", function (event) {
+//   if (event.target === modal) {
+//     closeModal();
+//   }
+// });
+
+

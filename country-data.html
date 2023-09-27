@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +16,7 @@
     <!-- ======== FONT AWESOME KIT ===========-->
 </head>
 <body>
+  <div class="clouds"></div>
      <!-- =========== HEADER =========== -->
      <header id="header" class="fix-top">
         <nav id = "stroke" class = "nav">
@@ -26,11 +28,13 @@
               <div class="dropdown">
                 <a class="dropbtn nav-link project-drop" href = "index.html#projects-scroll" id="project-drop"><span>Projects</span>&nbsp; <i class="fas fa-caret-down"></i></a>
                 <div class="dropdown-content">
-                  <a href="MDB-details.html">Museum Database</a>
-                  <a href="country-data.html">Country Data</a>
-                  <a href="#">Java Class Project</a>
-                  <a href="#">DS and Alg Project</a>
-                  <a href="#">Wordle Clone</a>
+                  <a href="MDB-details.html" >Museum Database</a>
+                  <a href="country-data.html" class="current-proj">Country Data</a>
+                  <a href="animalShelter.html">Java Animal Shelter</a>
+                  <a href="DsAlg-proj.html">DS and Alg Project</a>
+                  <a href="obituary.html">Obituary Site</a>
+                  <a href="https://domgartner-wordle.netlify.app/" target="_blank">Wordle Clone &nbsp;<i class="fa fa-external-link"></i></a>
+                  <a href="https://dominicgartner-lotion.netlify.app/notes" target="_blank">Notes App &nbsp;<i class="fa fa-external-link"></i></a>
                 </div>
               </div>
               <li><a href = "index.html#blog-scroll" class = "nav-link" data-text = "Blog">Blog</a></li>
@@ -50,9 +54,11 @@
                     <ul id="mini-project-dropdown">
                       <a href="MDB-details.html" class="mini-dropdown-link"><li>Museum Database</li></a>
                       <a href="country-data.html" class="mini-dropdown-link"><li>Country Data</li></a>
-                      <a href="#" class="mini-dropdown-link"><li>Java Class Project</li></a>
-                      <a href="#" class="mini-dropdown-link"><li>DS and Alg Project</li></a>
-                      <a href="#" class="mini-dropdown-link"><li>Wordle Clone</li></a>
+                      <a href="animalShelter.html" class="mini-dropdown-link"><li>Java Class Project</li></a>
+                      <a href="DsAlg-proj.html" class="mini-dropdown-link"><li>DS and Alg Project</li></a>
+                      <a href="obituary.html" class="mini-dropdown-link"><li>Obituary Site</li></a>
+                      <a href="https://domgartner-wordle.netlify.app/" target="_blank" class="mini-dropdown-link"><li>Wordle Clone &nbsp;<i class="external-link-small fa fa-external-link"></i></li></a>
+                      <a href="https://dominicgartner-lotion.netlify.app/notes" target="_blank" class="mini-dropdown-link"><li>Notes App &nbsp;<i class="external-link-small fa fa-external-link"></i></li></a>
                     </ul>
                   </div>
                   </li>
@@ -74,34 +80,48 @@
                 <div class="col-lg-6">
                   <div class="slideshow-container">
                     <div class="mySlides fade">
-                      <div class="numbertext">1 / 1</div>
-                      <a href="Images/233-final-proj.png" target="_blank"><img src="Images/233-final-proj.png" style="width:100%"></a>
+                      <div class="numbertext">1 / 2</div>
+                      <a><img class="slideshow-image" src="Images/233-final-proj.png" style="width:100%" alt="Python Code"></a>
                       <div class="text">Python Code</div>
                     </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 2</div>
+                      <a><img class="slideshow-image" src="Images/233-ex-output.png" style="width:100%" alt="Example Output"></a>
+                      <div class="text">Example output</div>
+                    </div>
+                  
                   </div>
                     <br>
                     <div style="text-align:center">
+                      <span role="button" class="dot"></span>
                       <span role="button" class="dot"></span> 
                     </div>
                 </div>
 
+                   <!-- ============ ------- ============ -->
+                   <div id="myModal" class="modal">
+                    <!-- <span id="close">&times;</span> -->
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+                <!-- ============ -------- ============ -->
+
             </div>
             <div class="col-lg-6">
                 <div class="project-desc">
-                  <br>
-                  <p>
-                    This project was completed in 2020, during my first year of engineering. Creating this program taught me a lot about data visualization 
+                  <p>This project was completed in 2020, during my first year of engineering. Creating this program taught me a lot about data visualization 
                     and data iteration in Python. This program allows users to access specific data about a country of their choice and graphs the data neatly for visual analysis. 
                     The program imports three .csv files, which contain data about geographical, population, and species data.
                   </p>
-                  <br>
+             
                   <div class="specs">
                     <h4 class="minor-title">Specs </h4>
                     <hr class="Title-line">
                     <div class="spec-container">
                       <ul>
                         <li class="spec-list"><strong>Software: </strong> Python</li>
-                        <li class="spec-list"><strong>Dependencies: </strong> numpy, matplotlib.pyplot, pandas</li>
+                        <li class="spec-list"><strong>Dependencies: </strong> numpy, matplotlib, pandas</li>
                         <li class="spec-list"><strong>Code Repository: &nbsp; </strong><span class="git-repo"><a href="https://github.com/Domgartner/Country-Data-ENDG223" target="_blank"><i class="fab fa-github"></i></a></span></li>
                       </ul>
                     </div>
@@ -115,8 +135,7 @@
             <h1 class="detail-title">Project Details</h1>
             <hr class="Title-line">
             <div class="detail-desc">
-              <p>
-                This project was completed as an assignment for ENDG 233, a first year engineering course at the University of Calgary with focus on programming with data. 
+              <p> This project was completed as an assignment for ENDG 233, a first year engineering course at the University of Calgary with focus on programming with data. 
                 <br><br>
                 The program reads data from three .csv files. One file contains geographical data from countries around the world, another contains country population data, and 
                 the last file contains threatened species data. Throughout the program, users are prompted to input different statistics they would like to access. These user inputs 
@@ -126,18 +145,12 @@
                 Exception handling is implemented to ensure invalid inputs do not result in a crashed program. Rather, the user is repeatedly prompted to enter valid input. 
                 After the program has recieved all the input required to generate the custom statistics on the country of the users choosing, the data is graphed neatly for visual analysis using matplotlib. 
                 The number if graphs and statistics outputted is a direct result of the users input to the prompt questions asked throughout the program.
-
-
-
               </p>
               <br>
               <h2 class="minor-title">Demonstration</h2>
-              <div class="demo-vid">
-                <video class="demo-video" width="708" height="420" controls>
-                  <source src="files/Country-data-demo.mp4" type="video/mp4">
-                  Video load failed.
-                </video>
-              </div>
+                <div class="demo-vid">
+                  <iframe class="demo-video" width="708" height="420" src="https://www.youtube.com/embed/lYpRleVyBGM" frameborder="0" allowfullscreen></iframe>
+                </div>
               <br><br>
             </div>
           </div>
@@ -150,11 +163,10 @@
         <section id = "Contact" class="contact-section">
           <br><br><br>
           <div class="title-desc">
-            <h1 class = "project-title">Contact Me</h1>
+            <h1 class = "project-title" id="cont-title">Contact Me</h1>
           </div>
-          <hr class="Title-line">
+          <hr class="Title-line" id="cont-line">
           <br>
-          <div class="section-start"></div>
           <div class="contact-box">
             <div class="input-group">
               <div class="input-container">
@@ -170,13 +182,13 @@
                 <label class="subject-label" for="subject-input">Subject</label>
               </div>
               <div class="section-start-contact"></div>
-              <textarea name="message" class="input" placeholder="Message" style="width:350px;min-width: 244px; max-width: 550px; max-height: 320px;"></textarea>
-              <button type="submit" value="Submit" class="input send-button">Send</button>
+              <textarea name="message" class="input" placeholder="Message" id="message-input" style="width:350px;min-width: 244px; max-width: 550px; max-height: 320px;"></textarea>
+              <button type="submit" value="Submit" class="input send-button" id="sender">Send</button>
             </div>
     
             <div class="contact-farewell">
               <h2 class="reach-out">Reach Out</h2>
-              <hr class="Title-line">
+              <hr class="Title-line" id="cont-line">
               <br>
               <p>Feel free to contact me at any time. I welcome all feedback and suggestions for this site or any of the projects here. </p>
               <br><br>
@@ -227,5 +239,13 @@
             }
         });
     </script>
+     <script type="text/javascript"
+     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+   </script>
+   <script type="text/javascript">
+     (function(){
+       emailjs.init("2-Fjj8mnfXx1xrKc5");
+     })();
+   </script>
 </body>
 </html>

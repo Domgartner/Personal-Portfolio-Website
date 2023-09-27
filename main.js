@@ -44,7 +44,6 @@ const smallNav = document.querySelector(".small-nav-drop-cont");
 
 for (let i = 0; i < miniNavLinks.length; i++) {
   miniNavLinks[i].addEventListener("click", function() {
-    console.log("CLICK");
     smallNav.style.display = "none";
     smallBack.style.display = "none";
     xMark.style.display = "none";
@@ -139,3 +138,140 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+
+const nameInput = document.getElementById("name-input");
+const emailInput = document.getElementById("email-input");
+const subjectInput = document.getElementById("subject-input");
+// const sendButton = document.querySelector(".send-button");
+// Function to handle the "Send" button click
+function handleSendButtonClick() {
+
+  if (nameInput.value && emailInput.value && subjectInput.value) {
+    // Change the button text to "Sent!" and disable it
+    sendButton.textContent = "Sent!";
+    sendButton.style.color = "lightgreen"; // Change the text color to green
+    sendButton.style.borderColor = "lightgreen";
+    sendButton.disabled = true;
+
+    // After 5 seconds, revert the button text and re-enable it
+    setTimeout(function () {
+      sendButton.textContent = "Send";
+      sendButton.disabled = false;
+      sendButton.style.color = "white";
+      sendButton.style.borderColor = "white";
+    }, 6000); // 5000 milliseconds (5 seconds)
+  }
+  if (!nameInput.value || !emailInput.value || !subjectInput.value) {
+    window.alert("Please fill all fields to send message!")
+  }
+}
+const sendButton = document.querySelector(".send-button");
+sendButton.addEventListener("click", handleSendButtonClick);
+
+
+
+
+const clicked = document.getElementById("sender");
+clicked.addEventListener('click',function(e){
+   e.preventDefault();
+   sendMail();
+});
+
+function sendMail(){
+   var params = {
+       name : document.getElementById('name-input').value,
+       email : document.getElementById('email-input').value,
+       subject : document.getElementById('subject-input').value,
+       message : document.getElementById('message-input').value,
+       
+   };
+  const serviceID = "service_sqx3jo3";
+  const tempID = "template_57rdyzu";
+  if (nameInput.value && emailInput.value && subjectInput.value) {
+    emailjs.send(serviceID,tempID,params)
+    .then((res)=>{
+      document.getElementById('name-input').value= ""
+      document.getElementById('email-input').value= ""
+      document.getElementById('subject-input').value= ""
+      document.getElementById('message-input').value= ""
+    })
+  }
+}
+
+
+
+function updateBackgroundHeights() {
+  const pageHeight = Math.min(document.body.scrollHeight, document.body.offsetHeight);
+  const elements = document.querySelectorAll('.stars, .twinkling, .clouds');
+  elements.forEach(element => {
+      element.style.height = pageHeight + 'px';
+  });
+}
+
+// Call the function initially and whenever the window is resized
+updateBackgroundHeights();
+window.addEventListener('resize', updateBackgroundHeights);
+
+
+
+// Get all image elements with class "image-src-proj"
+const projectImages = document.querySelectorAll(".image-src-proj");
+const modal = document.getElementById("myModal");
+const modalImg = document.getElementById("img01");
+const captionText = document.getElementById("caption");
+const closeModal = document.getElementById("close");
+
+// Function to open the modal with the clicked image
+function openModal(imageSrc, altText) {
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+  captionText.innerHTML = altText;
+  document.body.style.overflow = "hidden"; 
+}
+
+// Add click event listeners to all project images
+projectImages.forEach((image, index) => {
+  image.addEventListener("click", () => {
+    const imageSrc = image.src;
+    const altText = image.alt;
+    openModal(imageSrc, altText);
+  });
+});
+
+// Close modal when the close button is clicked
+// closeModal.addEventListener("click", () => {
+//   modal.style.display = "none";
+// });
+
+
+document.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
+
+// Close modal when the navigation bar is clicked
+const navbar = document.getElementsByTagName("nav")[0];
+navbar.addEventListener("click", () => {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto"; 
+});
+
+
+document.addEventListener("touchstart", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
+
+
+
+// // Get all skill-list elements
+// const skillLists = document.querySelectorAll(".skill-list");
+// skillLists.forEach((skillList) => {
+//   skillList.addEventListener("click", () => {
+//     skillList.classList.toggle("active");
+//   });
+// });

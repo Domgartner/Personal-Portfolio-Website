@@ -28,12 +28,14 @@
               <div class="dropdown-content">
                 <a href="MDB-details.html">Museum Database</a>
                 <a href="country-data.html">Country Data</a>
-                <a href="#">Java Class Project</a>
-                <a href="#">DS and Alg Project</a>
-                <a href="#">Wordle Clone</a>
+                <a href="animalShelter.html">Java Animal Shelter</a>
+                <a href="DsAlg-proj.html">DS and Alg Project</a>
+                <a href="obituary.html">Obituary Site</a>
+                <a href="https://domgartner-wordle.netlify.app/" target="_blank">Wordle Clone &nbsp;<i class="fa fa-external-link"></i></a>
+                <a href="https://dominicgartner-lotion.netlify.app/notes" target="_blank">Notes App &nbsp;<i class="fa fa-external-link"></i></a>
               </div>
             </div>
-            <li><a href = "index.html#blog-scroll" class = "nav-link" data-text = "Blog">Blog</a></li>
+            <li><a href = "index.html#blog-scroll" class = "nav-link blog-nav-link active" data-text = "Blog">Blog</a></li>
             <li><a href = "#contact-scroll" class = "nav-link contact-blog-link" data-text = "Contact">Contact</a></li>
           </ul>
           <div class="small-nav">
@@ -50,9 +52,11 @@
                   <ul id="mini-project-dropdown">
                     <a href="MDB-details.html" class="mini-dropdown-link"><li>Museum Database</li></a>
                     <a href="country-data.html" class="mini-dropdown-link"><li>Country Data</li></a>
-                    <a href="#" class="mini-dropdown-link"><li>Java Class Project</li></a>
-                    <a href="#" class="mini-dropdown-link"><li>DS and Alg Project</li></a>
-                    <a href="#" class="mini-dropdown-link"><li>Wordle Clone</li></a>
+                    <a href="animalShelter.html" class="mini-dropdown-link"><li>Java Class Project</li></a>
+                    <a href="DsAlg-proj.html" class="mini-dropdown-link"><li>DS and Alg Project</li></a>
+                    <a href="obituary.html" class="mini-dropdown-link"><li>Obituary Site</li></a>
+                    <a href="https://domgartner-wordle.netlify.app/" target="_blank" class="mini-dropdown-link"><li>Wordle Clone &nbsp;<i class="external-link-small fa fa-external-link"></i></li></a>
+                    <a href="https://dominicgartner-lotion.netlify.app/notes" target="_blank" class="mini-dropdown-link"><li>Notes App &nbsp;<i class="external-link-small fa fa-external-link"></i></li></a>
                   </ul>
                 </div>
                 </li>
@@ -111,9 +115,9 @@
     <section id = "Contact" class="contact-section">
       <br><br><br>
       <div class="title-desc">
-        <h1 class = "project-title">Contact Me</h1>
+        <h1 class = "project-title" id="cont-title">Contact Me</h1>
       </div>
-      <hr class="Title-line">
+      <hr class="Title-line" id="cont-line">
       <br>
       <div class="contact-box">
         <div class="input-group">
@@ -129,14 +133,14 @@
             <input name="subject" type="text" class="input" id="subject-input" required />
             <label class="subject-label" for="subject-input">Subject</label>
           </div>
-          <textarea name="message" class="input" placeholder="Message" style="width:350px;min-width: 244px; max-width: 550px; max-height: 320px;"></textarea>
-          <button type="submit" value="Submit" class="input send-button">Send</button>
+          <textarea name="message" class="input" placeholder="Message" id="message-input" style="width:350px;min-width: 244px; max-width: 550px; max-height: 320px;"></textarea>
+          <button type="submit" value="Submit" class="input send-button" id="sender">Send</button>
           <div class="section-blog-contact"></div>
         </div>
 
         <div class="contact-farewell">
           <h2 class="reach-out">Reach Out</h2>
-          <hr class="Title-line">
+          <hr class="Title-line" id="cont-line">
           <br>
           <p>Feel free to contact me at any time. I welcome all feedback and suggestions for this site or any of the projects here. </p>
           <br><br>
@@ -171,6 +175,7 @@
     <script src="secondary.js"></script>
     <script>
       const blogContLink = document.querySelector('.section-blog-contact');
+      const blogNavLink = document.querySelector(".blog-nav-link");
       const blogCont = document.querySelector('.contact-blog-link');
       function isInViewport(element) {
         const rect = element.getBoundingClientRect();
@@ -182,10 +187,20 @@
       window.addEventListener('scroll', function() {
           if (isInViewport(blogContLink)) {
             blogCont.classList.add('active');
+            blogNavLink.classList.remove("active");
             } else {
               blogCont.classList.remove('active');
+              blogNavLink.classList.add("active");
             }
         });
     </script>
+     <script type="text/javascript"
+     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+   </script>
+   <script type="text/javascript">
+     (function(){
+       emailjs.init("2-Fjj8mnfXx1xrKc5");
+     })();
+   </script>
   </body>
 </html>
