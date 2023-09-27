@@ -772,6 +772,9 @@ video::-webkit-media-controls-panel {
         grid-row: 2;
         width: 100%;
     }
+    #Contact {
+        background-attachment: scroll;
+    }
 }
 .contact-farewell {
     margin: 4%;
